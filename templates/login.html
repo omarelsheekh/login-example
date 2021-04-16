@@ -29,7 +29,13 @@
                     Remember me
                 </label>
             </div>
-            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            <div class="field">
+                <button class="button is-block is-info is-large is-fullwidth">Login</button>
+            </div>
+            <div class="field">
+                <a class="button is-block is-info is-large is-fullwidth"
+                href="{{ url_for('google_auth.login') }}">Google Login</a>
+            </div>
         </form>
     </div>
 </div>

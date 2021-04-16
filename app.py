@@ -1,6 +1,7 @@
 from flask.helpers import url_for
 from admin import create_admin
 from auth import auth_blueprint
+from google_auth import google_auth_blueprint
 from user import user as user_blueprint
 from models import setup_db
 from flask import Flask, redirect
@@ -33,6 +34,7 @@ else:
     db.create_all()
 # both bluprint is constructed different ways
 app.register_blueprint(auth_blueprint(db), url_prefix='/auth')
+app.register_blueprint(google_auth_blueprint(db), url_prefix='/google')
 app.register_blueprint(user_blueprint, url_prefix='/user')
 
 admin = create_admin(app, db)

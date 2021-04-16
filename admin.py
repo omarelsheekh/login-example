@@ -16,7 +16,7 @@ class AppModelView(ModelView):
 
     def inaccessible_callback(self, name, **kwargs):
         # redirect to login page if user doesn't have access
-        return redirect(url_for('auth.login'))
+        return redirect('/admin')
 
 class MyAdminView(AdminIndexView):
     @expose('/')

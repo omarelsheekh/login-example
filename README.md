@@ -11,7 +11,7 @@
  you can run the app for testing purposes using [docker](https://docs.docker.com/engine/install/)
 ```
 $ docker build -t <image-name> .
-$ docker run -dp 8000:8000 <image-name>
+$ docker run -dp 8000:8000 -v <google-creds-path>:/tmp/google_creds.json <image-name>
 ```
 you can view the app in your browser at ``` localhost:8000```
 ### Admin
