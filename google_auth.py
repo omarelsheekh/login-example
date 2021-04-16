@@ -68,3 +68,4 @@ def google_auth_blueprint(db):
         return redirect(url_for('index'))
 
     return google_auth
+# reference: https://developers.google.com/identity/protocols/oauth2/web-server
